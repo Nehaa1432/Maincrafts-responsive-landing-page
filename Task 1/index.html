@@ -2,519 +2,147 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MainCrafts Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<title>MainCrafts - Home</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        /* ================= RESET ================= */
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* ================= BODY ================= */
-
-        body{
-            font-family: 'Poppins', sans-serif;
-            background: #f5f7fa;
-            color: #333333;
-        }
-
-        /* ================= HEADER ================= */
-
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 20px 80px;
-
-            background: linear-gradient(to right, #141e30, #243b55);
-
-            color: white;
-
-            position: sticky;
-            top: 0;
-
-            z-index: 1000;
-        }
-
-        /* Logo */
-
-        .logo{
-            font-size: 28px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        /* ================= NAVIGATION ================= */
-
-        .nav-links{
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links li{
-            position: relative;
-        }
-
-        .nav-links li a{
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .nav-links li a:hover{
-            color: #45c0df;
-        }
-
-        /* ================= DROPDOWN ================= */
-
-        .dropdown-menu{
-            position: absolute;
-
-            top: 35px;
-            left: 0;
-
-            background: white;
-
-            width: 220px;
-
-            border-radius: 10px;
-
-            overflow: hidden;
-
-            display: none;
-
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .dropdown-menu li{
-            list-style: none;
-        }
-
-        .dropdown-menu li a{
-            display: block;
-            padding: 12px 15px;
-            color: #333;
-        }
-
-        .dropdown-menu li a:hover{
-            background: #f2f2f2;
-        }
-
-        /* Show Dropdown */
-
-        .dropdown:hover .dropdown-menu{
-            display: block;
-        }
-
-        /* ================= HERO SECTION ================= */
-
-        .hero{
-            height: 90vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 20px;
-
-            background:
-                linear-gradient(rgba(0,0,0,0.6),
-                rgba(0,0,0,0.6)),
-                url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-
-            background-size: cover;
-            background-position: center;
-
-            color: white;
-        }
-
-        .hero-content h1{
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p{
-            font-size: 20px;
-            max-width: 700px;
-            margin: auto;
-            margin-bottom: 30px;
-        }
-
-        /* Button */
-
-        .hero-content button{
-            padding: 15px 35px;
-
-            border: none;
-            border-radius: 50px;
-
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-
-            color: white;
-
-            font-size: 16px;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-        .hero-content button:hover{
-            transform: scale(1.05);
-        }
-
-        /* ================= FEATURES SECTION ================= */
-
-        .features{
-            padding: 80px 10%;
-            text-align: center;
-        }
-
-        .features h2{
-            font-size: 40px;
-            margin-bottom: 50px;
-        }
-
-        .feature-container{
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-
-            gap: 30px;
-        }
-
-        /* Cards */
-
-        .card{
-            background: white;
-
-            padding: 40px 25px;
-
-            border-radius: 15px;
-
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
-            transition: 0.3s;
-        }
-
-        .card:hover{
-            transform: translateY(-10px);
-        }
-
-        /* Icons */
-
-        .card i{
-            font-size: 45px;
-
-            margin-bottom: 20px;
-
-            color: #0072ff;
-        }
-
-        /* Card Title */
-
-        .card h3{
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        /* Card Text */
-
-        .card p{
-            color: #666;
-            font-size: 15px;
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer{
-            background: #141e30;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 30px 20px;
-        }
-
-        .footer-links{
-            margin-top: 15px;
-        }
-
-        .footer-links a{
-            color: #00c6ff;
-
-            text-decoration: none;
-
-            margin: 0 10px;
-        }
-
-        .footer-links a:hover{
-            text-decoration: underline;
-        }
-
-        /* ================= RESPONSIVE ================= */
-
-       @media(max-width:768px){
-
-    /* HEADER */
-
-    header{
-        flex-direction: column;
-        align-items: center;
-
-        padding: 15px 20px;
-    }
-
-    /* NAVBAR */
-
-    .nav-links{
-        flex-direction: column;
-
-        gap: 15px;
-
-        margin-top: 15px;
-
-        text-align: center;
-    }
-
-    /* HERO SECTION */
-
-    .hero{
-        height: auto;
-
-        padding: 100px 20px;
-    }
-
-    .hero-content h1{
-        font-size: 34px;
-
-        line-height: 1.3;
-    }
-
-    .hero-content p{
-        font-size: 16px;
-
-        padding: 0 10px;
-    }
-
-    /* BUTTON */
-
-    .hero-content button{
-        width: 100%;
-
-        max-width: 250px;
-    }
-
-    /* FEATURES */
-
-    .features{
-        padding: 60px 20px;
-    }
-
-    .features h2{
-        font-size: 30px;
-    }
-
-    .feature-container{
-        grid-template-columns: 1fr;
-    }
-
-    /* CARDS */
-
-    .card{
-        padding: 30px 20px;
-    }
-
-    /* FOOTER */
-
-    .footer-links{
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-}
-
-    </style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <div class="logo">
-            MainCrafts
-        </div>
+<div class="logo">
+MainCrafts
+</div>
 
-        <nav>
+<nav>
 
-            <ul class="nav-links">
+<ul class="nav-links">
 
-                <li><a href="#">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-                <li><a href="#features">Features</a></li>
+<li><a href="about.html">About</a></li>
 
-                <!-- Dropdown -->
+<li><a href="contact.html">Contact</a></li>
 
-                <li class="dropdown">
+</ul>
 
-                    <a href="#">
-                        Services
-                        <i class="fa-solid fa-caret-down"></i>
-                    </a>
+</nav>
 
-                    <ul class="dropdown-menu">
+</header>
 
-                        <li><a href="#">Web Development</a></li>
+<!-- HERO SECTION -->
 
-                        <li><a href="#">App Development</a></li>
+<section class="hero">
 
-                        <li><a href="#">UI/UX Design</a></li>
+<div class="hero-content">
 
-                        <li><a href="#">SEO Optimization</a></li>
+<h1>Build Smarter with MainCrafts</h1>
 
-                    </ul>
+<p>
+We create modern, scalable and responsive digital solutions
+for startups, businesses and creators.
+</p>
 
-                </li>
+<button>Get Started</button>
 
-                <li><a href="#footer">Contact</a></li>
+</div>
 
-            </ul>
+</section>
 
-        </nav>
+<!-- FEATURES SECTION -->
 
-    </header>
+<section class="features">
 
-    <!-- ================= HERO SECTION ================= -->
+<h2>Our Features</h2>
 
-    <section class="hero">
+<div class="feature-container">
 
-        <div class="hero-content">
+<div class="card">
 
-            <h1>Build Smarter with MainCrafts</h1>
+<i class="fa-solid fa-bolt"></i>
 
-            <p>
-                We create modern, scalable and responsive digital solutions
-                for startups, businesses and creators.
-            </p>
+<h3>Fast</h3>
 
-            <button>Get Started</button>
+<p>
+High-performance websites with optimized speed and smooth
+user experience.
+</p>
 
-        </div>
+</div>
 
-    </section>
+<div class="card">
 
-    <!-- ================= FEATURES SECTION ================= -->
+<i class="fa-solid fa-mobile-screen-button"></i>
 
-    <section class="features" id="features">
+<h3>Responsive</h3>
 
-        <h2>Our Features</h2>
+<p>
+Fully responsive layouts that work perfectly on mobile,
+tablet and desktop devices.
+</p>
 
-        <div class="feature-container">
+</div>
 
-            <!-- Card 1 -->
+<div class="card">
 
-            <div class="card">
+<i class="fa-solid fa-cloud"></i>
 
-                <i class="fa-solid fa-bolt"></i>
+<h3>Scalable</h3>
 
-                <h3>Fast</h3>
+<p>
+Applications designed to grow with your business needs
+and future requirements.
+</p>
 
-                <p>
-                    High-performance websites with optimized speed and smooth experience.
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
-            <!-- Card 2 -->
+<i class="fa-solid fa-shield-halved"></i>
 
-            <div class="card">
+<h3>Secure</h3>
 
-                <i class="fa-solid fa-mobile-screen-button"></i>
+<p>
+Modern security practices to keep your websites and
+applications safe and protected.
+</p>
 
-                <h3>Responsive</h3>
+</div>
 
-                <p>
-                    Fully responsive layouts that work perfectly on all devices.
-                </p>
+</div>
 
-            </div>
+</section>
 
-            <!-- Card 3 -->
+<!-- FOOTER -->
 
-            <div class="card">
+<footer>
 
-                <i class="fa-solid fa-cloud"></i>
+<p>© 2025 MainCrafts. All Rights Reserved.</p>
 
-                <h3>Scalable</h3>
+<div class="footer-links">
 
-                <p>
-                    Easily scalable applications designed for future business growth.
-                </p>
+<a href="#">Privacy Policy</a>
 
-            </div>
+<a href="#">Terms</a>
 
-            <!-- Card 4 -->
+<a href="contact.html">Contact</a>
 
-            <div class="card">
+</div>
 
-                <i class="fa-solid fa-shield-halved"></i>
-
-                <h3>Secure</h3>
-
-                <p>
-                    Strong security practices to keep your applications safe and protected.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer id="footer">
-
-        <p>Copyright © 2025. All Rights Reserved.</p>
-
-        <div class="footer-links">
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms</a>
-
-            <a href="#">Contact</a>
-
-        </div>
-
-    </footer>
+</footer>
 
 </body>
 

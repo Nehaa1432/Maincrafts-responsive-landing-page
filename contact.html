@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MainCrafts - Contact</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+MainCrafts
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact">
+
+<h1>Contact Us</h1>
+
+<p>
+Have a question or project idea? We'd love to hear from you.
+Send us a message below.
+</p>
+
+<form onsubmit="return validateForm()">
+
+<input
+type="text"
+id="name"
+placeholder="Enter Your Name">
+
+<input
+type="email"
+id="email"
+placeholder="Enter Your Email">
+
+<textarea
+id="message"
+rows="6"
+placeholder="Enter Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2025 MainCrafts. All Rights Reserved.</p>
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</footer>
+
+<!-- JAVASCRIPT VALIDATION -->
+
+<script>
+
+function validateForm(){
+
+let name =
+document.getElementById("name").value.trim();
+
+let email =
+document.getElementById("email").value.trim();
+
+let message =
+document.getElementById("message").value.trim();
+
+if(name === ""){
+
+alert("Please enter your name");
+
+return false;
+
+}
+
+if(email === ""){
+
+alert("Please enter your email");
+
+return false;
+
+}
+
+if(message === ""){
+
+alert("Please enter your message");
+
+return false;
+
+}
+
+alert("Form submitted successfully!");
+
+return true;
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Submissions</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+MainCrafts
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="submissions.html">Submissions</a></li>
+
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="contact">
+
+    <h1>Saved Submissions</h1>
+
+    <h3>
+        Total Submissions:
+        <span id="count"></span>
+    </h3>
+
+    <div id="submissionContainer"></div>
+
+</section>
+
+<script>
+
+let submissions =
+JSON.parse(localStorage.getItem("submissions")) || [];
+
+document.getElementById("count").innerText =
+submissions.length;
+
+let html = "";
+
+submissions.forEach(function(data){
+
+html += `
+
+<div class="submission-card">
+
+    <h3>👤 ${data.name}</h3>
+
+    <p><strong>Email:</strong> ${data.email}</p>
+
+    <p><strong>Message:</strong> ${data.message}</p>
+
+    <p>📅 ${data.date}</p>
+
+    <p>⏰ ${data.time}</p>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("submissionContainer")
+.innerHTML = html;
+
+</script>
+
+<footer>
+
+<p>© 2025 MainCrafts. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+
+</html>
